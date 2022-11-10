@@ -1,5 +1,6 @@
 using Laud.Media.Application.Middlewares;
 using Laud.Media.Application;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -49,6 +50,8 @@ app.UseSwaggerUi3(settings =>
 });
 // Global error handling middleware
 app.UseMiddleware<ErrorHandlerMiddleware>();
+
+app.UseCors(options => options.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200"));
 
 app.UseRouting();
 app.UseAuthorization();
