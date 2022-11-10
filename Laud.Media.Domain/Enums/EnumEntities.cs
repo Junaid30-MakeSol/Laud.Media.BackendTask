@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Laud.Media.Domain.Domain.Enums
+namespace Laud.Media.Domain.Enums
 {
     public class EnumEntities
     {

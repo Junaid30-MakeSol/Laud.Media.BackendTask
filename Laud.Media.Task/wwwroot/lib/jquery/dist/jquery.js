@@ -5654,7 +5654,7 @@ function leverageNative( el, type, expectSync ) {
 					if ( saved !== result ) {
 
 						// Cancel the outer synthetic event
-						event.stopImmediatePropagation();
+						event.stoLaud.MediamediatePropagation();
 						event.preventDefault();
 						return result.value;
 					}
@@ -5678,7 +5678,7 @@ function leverageNative( el, type, expectSync ) {
 					value: jQuery.event.trigger(
 
 						// Support: IE <=9 - 11+
-						// Extend with the prototype to reset the above stopImmediatePropagation()
+						// Extend with the prototype to reset the above stoLaud.MediamediatePropagation()
 						jQuery.extend( saved[ 0 ], jQuery.Event.prototype ),
 						saved.slice( 1 ),
 						this
@@ -5686,7 +5686,7 @@ function leverageNative( el, type, expectSync ) {
 				} );
 
 				// Abort handling of the native event
-				event.stopImmediatePropagation();
+				event.stoLaud.MediamediatePropagation();
 			}
 		}
 	} );
@@ -5776,13 +5776,13 @@ jQuery.Event.prototype = {
 			e.stopPropagation();
 		}
 	},
-	stopImmediatePropagation: function() {
+	stoLaud.MediamediatePropagation: function() {
 		var e = this.originalEvent;
 
 		this.isImmediatePropagationStopped = returnTrue;
 
 		if ( e && !this.isSimulated ) {
-			e.stopImmediatePropagation();
+			e.stoLaud.MediamediatePropagation();
 		}
 
 		this.stopPropagation();
