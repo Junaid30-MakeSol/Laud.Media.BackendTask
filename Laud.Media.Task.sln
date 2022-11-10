@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33020.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laud.Media.Task", "Laud.Media.Task\Laud.Media.Task.csproj", "{E810F3FC-99B7-4017-B73F-316B7F61A4A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laud.Media.Web", "Laud.Media.Task\Laud.Media.Web.csproj", "{E810F3FC-99B7-4017-B73F-316B7F61A4A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 Web", "01 Web", "{B1D26C16-52A9-42DD-8EC6-905561C42B23}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 Infrastructure", "03 Infrastructure", "{D04811BE-EB88-456B-9C2F-3E736D1F5681}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laud.Media.Infrastructure", "Laud.Media.Infrastructure\Laud.Media.Infrastructure.csproj", "{EEB4F273-CA55-462E-B076-9EEB944E4142}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 Core", "02 Core", "{7904215D-F5B2-4B13-B357-67F9F2B4D7E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laud.Media.Domain", "Laud.Media.Domain\Laud.Media.Domain.csproj", "{1BB4A4C4-92B7-4205-BDFF-4EAFB689DDC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +25,22 @@ Global
 		{E810F3FC-99B7-4017-B73F-316B7F61A4A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E810F3FC-99B7-4017-B73F-316B7F61A4A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E810F3FC-99B7-4017-B73F-316B7F61A4A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEB4F273-CA55-462E-B076-9EEB944E4142}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEB4F273-CA55-462E-B076-9EEB944E4142}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEB4F273-CA55-462E-B076-9EEB944E4142}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEB4F273-CA55-462E-B076-9EEB944E4142}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BB4A4C4-92B7-4205-BDFF-4EAFB689DDC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BB4A4C4-92B7-4205-BDFF-4EAFB689DDC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BB4A4C4-92B7-4205-BDFF-4EAFB689DDC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BB4A4C4-92B7-4205-BDFF-4EAFB689DDC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E810F3FC-99B7-4017-B73F-316B7F61A4A4} = {B1D26C16-52A9-42DD-8EC6-905561C42B23}
+		{EEB4F273-CA55-462E-B076-9EEB944E4142} = {D04811BE-EB88-456B-9C2F-3E736D1F5681}
+		{1BB4A4C4-92B7-4205-BDFF-4EAFB689DDC8} = {7904215D-F5B2-4B13-B357-67F9F2B4D7E0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9B0B3BF4-B957-4C06-A215-8E224D6F0676}
