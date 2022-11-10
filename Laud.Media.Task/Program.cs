@@ -1,7 +1,31 @@
+using Laud.Media.Application.Middlewares;
+using Laud.Media.Application;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddRazorPages();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddOpenApiDocument(config =>
+{
+    config.Title = "Laud Media Task Open API";
+    config.Version = "v1";
+});
+
+builder.Services.AddRouting(options => options.LowercaseUrls = true);
+builder.Services.AddControllers();
+
+
+builder.Services.AddApplicationServices(builder.Configuration);
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy", policy =>
+    {
+        policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("*");
+    });
+});
+
 
 var app = builder.Build();
 
@@ -16,10 +40,24 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
+
+
+app.UseOpenApi();
+app.UseSwaggerUi3(settings =>
+{
+    settings.Path = "/api";
+});
+// Global error handling middleware
+app.UseMiddleware<ErrorHandlerMiddleware>();
+
 app.UseRouting();
-
 app.UseAuthorization();
-
 app.MapRazorPages();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
+
 
 app.Run();

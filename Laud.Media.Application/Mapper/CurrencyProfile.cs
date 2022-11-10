@@ -1,8 +1,7 @@
 ﻿using AutoMapper;
 using Laud.Media.Application.Models.Currency;
-using Laud.Media.Domain.Domain.Enums;
-using Laud.Media.Domain.Entities.Currency;
 using Laud.Media.Domain.Enums;
+using Laud.Media.Domain.Entities.Currency;
 
 namespace Laud.Media.Application.Mapper
 {
