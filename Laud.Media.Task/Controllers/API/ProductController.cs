@@ -25,7 +25,7 @@ namespace PIMS.WEB.Controllers.API
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<ProductModel>))]
         [Description("Get all products")]
-        public IActionResult GetAllCurrencies()
+        public IActionResult GetAllProducts()
         {
             var result = _ProductManager.GetAllProducts();
             return Ok(result);
