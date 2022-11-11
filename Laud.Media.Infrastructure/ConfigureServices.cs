@@ -14,6 +14,7 @@ namespace Laud.Media.Infrastructure
         {
             services.AddScoped<AuditableEntitySaveChangesInterceptor>();
             services.AddTransient<ICurrencyRepository, CurrencyRepository>();
+            services.AddTransient<IProductRepository, ProductRepository>();
 
             services.AddTransient<IGenericRepository<ApplicationDbContext>, GenericRepository<ApplicationDbContext>>();
             services.AddDbContext<ApplicationDbContext>(options =>

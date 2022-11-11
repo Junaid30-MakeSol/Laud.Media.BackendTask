@@ -18,7 +18,11 @@ namespace Laud.Media.Application
         public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration configure)
         {
             services.AddTransient<ICurrencyManager, CurrencyManager>();
+            services.AddTransient<IProductManager, ProductManager>();
+
             services.AddAutoMapper(typeof(CurrencyProfile));
+            services.AddAutoMapper(typeof(ProductProfile));
+
 
             services.AddValidatorsFromAssemblyContaining<CurrencyValidator>();
             services.AddFluentValidationRulesToSwagger();
