@@ -4,9 +4,9 @@ namespace Laud.Media.Domain.Entities
 {
     public abstract class BaseAuditableEntity
     {
-        [JsonIgnore]
+        //[JsonIgnore]
         public int Id { get; set; }
-        [JsonIgnore]
+        //[JsonIgnore]
         public Guid Guid { get; set; }
         [JsonIgnore]
         public DateTime Created { get; set; }
